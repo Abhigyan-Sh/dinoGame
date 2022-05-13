@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    background-color: rgb(216, 216, 216);
+}
+.scoreBoard {
+    position: absolute;
+    font-size: 20px;
+    color: black;
+    right: 10px;
+}
+#Scoreheading {
+    color: rgb(182, 75, 75);
+    /* text-decoration: dashed; */
+}
+#Highscoreheading {
+    color: rgb(182, 75, 75);
+    margin-left: 10px;
+}
+.game {
+    border: 1px dashed seagreen;
+    height: 220px;
+    max-width: 800px;
+    margin: 100px auto;
+    background-color: #ffffff;
+    /*  */
+    position: relative;
+}
+.dino {
+    width: 50px;
+    height: 50px;
+    background-image: url('./img/dino.png');
+    /* background-image: url('./img/running_pterosauruspng.png'); */
+    background-size: 50px 50px;
+    position: relative;
+    top: 170px;
+    z-index: 1;
+    left: 40px;
+}
+.jump {
+    animation: jump 0.5s linear;
+}
+
+@keyframes jump {
+    0% {
+        top: 150px;
+    }
+    30% {
+        top: 120px;
+    }
+    50% {
+        top: 100px;
+    }
+    60% {
+        top: 90px;
+    }
+    70% {
+        top: 120px;
+    }
+    100% {
+        top: 150px;
+    }
+}
+.cactus {
+    width: 37px;
+    height: 37px;
+    background-image: url('./img/cactus.png');
+    background-size: 37px 37px;
+    position: relative;
+    top: 133px;
+    left: 760px;
+    /* name duration times direction */
+}
+.anime {
+    animation: parse 1.2s infinite linear;
+}
+@keyframes parse {
+    0% {
+        left: 760px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+.reloadBtn {
+    width: 100px;
+    height: 100px;
+    background-image: url('./img/reload.png');
+    background-size: 100px 100px;
+    margin: 0 auto;
+    position: absolute;
+    top: 20px;
+    left: 40%;
+    cursor: pointer;
+}
